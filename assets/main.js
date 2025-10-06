@@ -30,16 +30,19 @@ console.log(age)
 
 // Il prezzo del biglietto è definito in base ai km (0.21 € al km)
 const price = km * 0.21
-const price_decimal = price.toFixed(2)
-
-// sconto del 20% per i minorenni
-const under_18 = price * 20 / 100 
-const under_18_decimal = under_18.toFixed(2)
-
 
 if (age < 18) {
     // sconto minorenni
-    console.log(price_decimal - under_18_decimal)
-    }
+    const under_18 = price - (price * 20 / 100)
+    const under_18_decimal = under_18.toFixed(2)
+    console.log(under_18_decimal)
+    } else if (age > 65) {
+    // sconto over 65
+    const over_65 = price - (price * 40 / 100)
+    const over_65_decimal = over_65.toFixed(2)
+    console.log(over_65_decimal)}
     // prezzo pieno
-    else console.log(price_decimal)
+    else {
+    const full_price = price
+    const full_price_decimal = full_price.toFixed(2) 
+    console.log(full_price_decimal)}
