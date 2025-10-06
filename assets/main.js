@@ -27,3 +27,7 @@ console.log(km)
 // età del passeggero 
 const age = Number(prompt("Inserisci la tua età")) //28
 console.log(age)
+
+// Il prezzo del biglietto è definito in base ai km (0.21 € al km)
+const price = km * 0.21
+console.log(price)
